@@ -14,6 +14,7 @@ PROG6 = verbr
 PROG7 = erzeug_nonBlock
 PROG8 = semcreate
 PROG9 = anonymePipe
+PROG10 = semdelete
 
 all:
 		make $(PROG1);
@@ -25,6 +26,7 @@ all:
 		make $(PROG7);
 		make $(PROG8);
 		make $(PROG9);
+		make $(PROG10);
 
 $(PROG1): 	$(SRC)$(PROG1).c
 			$(CC) $(CFLAGS) -o $(BIN)$@ $(SRC)$(PROG1).c
@@ -53,6 +55,9 @@ $(PROG8): 	$(SRC)$(PROG8).c
 $(PROG9): 	$(SRC)$(PROG9).c
 			$(CC) $(CFLAGS) -o $(BIN)$@ $(SRC)$(PROG9).c $(LIB)
 
+$(PROG10): 	$(SRC)$(PROG10).c
+			$(CC) $(CFLAGS) -o $(BIN)$@ $(SRC)$(PROG10).c $(LIB)
+
 clean:
 		rm -f $(PROG1);
 		rm -f $(PROG2);
@@ -63,3 +68,4 @@ clean:
 		rm -f $(PROG7);
 		rm -f $(PROG8);
 		rm -f $(PROG9);
+		rm -f $(PROG10);

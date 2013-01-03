@@ -1,8 +1,7 @@
-pipe="pipe64"
-mkfifo $pipe
+mkfifo pipe64
 ./semcreate
-./erzeug $pipe 0 2 5 &
-./erzeug $pipe 1 1 4 &
-./erzeug $pipe 2 3 2 &
-./verbr $pipe
-rm $pipe
+./erzeug pipe64 0 2 5 &
+./erzeug pipe64 1 1 4 &
+./erzeug pipe64 2 3 2 & 
+./verbr	pipe64
+rm pipe64

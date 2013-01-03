@@ -65,7 +65,7 @@ int main (void) {
 		}
 		sprintf(fd,"%d",pipefd[1]);
 		argv[0] = "erzeug";
-		argv[1] = "";
+		argv[1] = "anonym";
 		argv[2] = "1";
 		argv[3] = "2";
 		argv[4] = "4";
@@ -84,7 +84,7 @@ int main (void) {
 		}
 		sprintf(fd,"%d",pipefd[0]);
 		argv[0] = "verbr";
-		argv[1] = "";
+		argv[1] = "anonym";
 		argv[2] = NULL;
 		envp[0] = fd;
 		envp[1] = NULL;

@@ -51,7 +51,7 @@ int main (int argc, char **argv, char **envp) {
 	key = ftok(".",0);
 	semid = sem_open(key);
 
-	if (envp[0] != NULL) {
+	if (strcmp(pipe, "anonym") == 0) {
 		pipeFd = atoi(envp[0]);
 	} else {
 		pipeFd = open(pipe, O_WRONLY);

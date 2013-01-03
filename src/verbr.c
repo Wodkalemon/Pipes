@@ -37,10 +37,10 @@ int main (int argc, char **argv, char **envp) {
 
 	pipe = argv[1];
 
-	if (envp[0] != NULL) {
+	if (strcmp(pipe, "anonym") == 0) {
 		pipeFd = atoi(envp[0]);
 	} else {
-		pipeFd = open(pipe, O_WRONLY);
+		pipeFd = open(pipe, O_RDONLY);
 	}
 
 	if (pipeFd < 0) {
